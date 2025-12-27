@@ -7,7 +7,7 @@
   <style>
     body {
       margin: 0;
-      font-family: 'Lora', serif;
+      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
       background: #fafafa;
       color: #111;
     }
@@ -25,6 +25,7 @@
       font-weight: 500;
       font-size: 56px;
       letter-spacing: 0.04em;
+      margin-bottom: 0;
     }
     h1, h2, h3 {
       font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
@@ -50,6 +51,7 @@
       width: 1px;
       height: 100%;
       background: #e6e6e6;
+      z-index: 0;
     }
     .apps .card {
       position: relative;
@@ -58,11 +60,14 @@
       content: "";
       position: absolute;
       left: -20px;
-      top: 28px;
-      width: 6px;
-      height: 6px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 8px;
+      height: 8px;
       border-radius: 50%;
-      background: #e6e6e6;
+      background: #fafafa;
+      border: 1px solid #e6e6e6;
+      z-index: 1;
     }
     .card {
       padding: 24px;
@@ -83,9 +88,9 @@
     .contact {
       font-size: 14px;
       color: #666;
-      margin-top: -10px;
+      margin-top: 4px;
       font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-      padding-left: 2px;
+      padding-left: 6px;
     }
     .contact a {
       color: inherit;
@@ -104,7 +109,7 @@
   </style>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Lora:wght@400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
   <div class="container">
