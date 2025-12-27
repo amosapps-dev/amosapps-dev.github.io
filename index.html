@@ -43,31 +43,33 @@
       position: relative;
       padding-left: 32px;
     }
-    .apps::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 12px;
-      width: 1px;
-      height: 100%;
-      background: #e6e6e6;
-      z-index: 0;
-    }
-    .apps .card {
-      position: relative;
-    }
     .apps .card::before {
       content: "";
       position: absolute;
-      left: -20px;
+      left: -16px;
+      top: 0;
+      width: 1px;
+      height: calc(50% - 8px);
+      background: #e6e6e6;
+    }
+    .apps .card::after {
+      content: "";
+      position: absolute;
+      left: -19px;
       top: 50%;
       transform: translateY(-50%);
       width: 8px;
       height: 8px;
       border-radius: 50%;
-      background: #fafafa;
-      border: 1px solid #e6e6e6;
-      z-index: 1;
+      background: #e6e6e6;
+    }
+    .apps .card .line-bottom {
+      position: absolute;
+      left: -16px;
+      top: calc(50% + 8px);
+      width: 1px;
+      height: calc(50% - 8px);
+      background: #e6e6e6;
     }
     .card {
       padding: 24px;
@@ -132,6 +134,7 @@
       <h2>Projects</h2>
       <div class="apps">
         <div class="card">
+          <span class="line-bottom"></span>
           <h3>What thing am I today?</h3>
           <p>
             An exploration of labels, identity, and interpretation. Each day, the app assigns a single, loosely defined “thing” to the user. The experience is minimal by design, inviting users to notice how easily they project context, humour, or personal significance onto a simple prompt.
