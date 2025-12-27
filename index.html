@@ -39,6 +39,30 @@
       display: flex;
       flex-direction: column;
       gap: 24px;
+      position: relative;
+      padding-left: 32px;
+    }
+    .apps::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 12px;
+      width: 1px;
+      height: 100%;
+      background: #e6e6e6;
+    }
+    .apps .card {
+      position: relative;
+    }
+    .apps .card::before {
+      content: "";
+      position: absolute;
+      left: -20px;
+      top: 28px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #e6e6e6;
     }
     .card {
       padding: 24px;
@@ -77,24 +101,6 @@
     .card h3 {
       margin-top: 0;
     }
-    .timeline {
-      position: relative;
-      padding-left: 32px;
-    }
-
-    .timeline::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 12px;
-      width: 1px;
-      height: 100%;
-      background: #e6e6e6;
-    }
-
-    .timeline .card {
-      position: relative;
-    }
   </style>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -108,28 +114,26 @@
         <a href="mailto:amosapps.dev@outlook.com">amosapps.dev@outlook.com</a>
       </p>
     </header>
-    <div class="timeline">
-      <section class="intro">
-        <h2>About</h2>
+    <section class="intro">
+      <h2>About</h2>
+      <div class="card">
+        <p>
+          I’m a solo builder exploring ideas through small, playful experiments. I use apps as a way to test concepts, behaviours, and interactions rather than chase polished outcomes. This page is a snapshot of that work and how I approach building things end to end.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Projects</h2>
+      <div class="apps">
         <div class="card">
+          <h3>What thing am I today?</h3>
           <p>
-            I’m a solo builder exploring ideas through small, playful experiments. I use apps as a way to test concepts, behaviours, and interactions rather than chase polished outcomes. This page is a snapshot of that work and how I approach building things end to end.
+            An exploration of labels, identity, and interpretation. Each day, the app assigns a single, loosely defined “thing” to the user. The experience is minimal by design, inviting users to notice how easily they project context, humour, or personal significance onto a simple prompt.
           </p>
         </div>
-      </section>
-
-      <section>
-        <h2>Projects</h2>
-        <div class="apps">
-          <div class="card">
-            <h3>What thing am I today?</h3>
-            <p>
-              An exploration of labels, identity, and interpretation. Each day, the app assigns a single, loosely defined “thing” to the user. The experience is minimal by design, inviting users to notice how easily they project context, humour, or personal significance onto a simple prompt.
-            </p>
-          </div>
-        </div>
-      </section>
-    </div>
+      </div>
+    </section>
 
     <footer>
       <p>© amos.dev</p>
