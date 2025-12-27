@@ -2,11 +2,61 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Amos Apps</title>
+  <title>Amos Dev</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #fafafa;
+      color: #111;
+    }
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 64px 24px;
+    }
+    header {
+      margin-bottom: 64px;
+    }
+    section {
+      margin-bottom: 64px;
+    }
+    .apps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
+    }
+    .card {
+      padding: 24px;
+      border-radius: 12px;
+      background: #fff;
+      border: 1px solid #eee;
+    }
+    footer {
+      font-size: 14px;
+      color: #666;
+    }
+  </style>
 </head>
 <body>
-  <h1>Amos Apps</h1>
-  <p>Apps by Amos.</p>
+  <div class="container">
+    <header>
+      <h1>Amos Dev</h1>
+      <p>Apps by Amos.</p>
+    </header>
+
+    <section>
+      <h2>Apps</h2>
+      <div class="apps">
+        <div class="card">App placeholder</div>
+        <div class="card">App placeholder</div>
+      </div>
+    </section>
+
+    <footer>
+      <p>Contact · GitHub</p>
+    </footer>
+  </div>
 </body>
 </html>
